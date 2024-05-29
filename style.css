@@ -12,6 +12,10 @@ body {
 li {
   list-style-type: none;
 }
+ul {
+  max-height: 200px;
+  overflow-y: auto;
+}
 .container {
   display: grid;
   justify-self: center;
@@ -97,5 +101,7 @@ li {
 @media (width <= 768px) {
   .card {
     width: fit-content;
+    margin-left: 12px;
+    margin-right: 12px;
   }
 }
