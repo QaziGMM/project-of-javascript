@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo list</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -19,40 +19,153 @@
     />
   </head>
   <body>
-    <div class="container">
-      <div class="card">
-        <h1>Todo App</h1>
-        <div class="todo-header">
-          <input
-            class="input"
-            id="todo-input"
-            type="text"
-            placeholder="Add yournew todo"
-          />
-          <button id="add-todo" onclick="addtask()">
-            <i class="fa-solid fa-plus icon"></i>
-          </button>
+    <div>
+      <div class="container">
+        <h2>Registration Form</h2>
+        <div class="div1">
+          <div class="child1">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              class="text"
+              placeholder="First Name"
+            />
+            <p class="error" id="fname-error"></p>
+          </div>
+          <div class="child1">
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              name=""
+              id="lname"
+              class="text"
+              placeholder="Last Name"
+            />
+            <p class="error" id="lname-error"></p>
+          </div>
         </div>
-        <!-- Listing -->
-        <ul id="todos">
-          <li class="list-item">Buy a New Gaming Laptop</li>
-          <li class="list-item">Buy a New Gaming Laptop</li>
-          <li class="list-item">Buy a New Gaming Laptop</li>
-        </ul>
-        <!-- <span class="trash"
-          ><p class="p">Complete a Previous Task</p>
-          <i class="fa-solid fa-trash icon"></i
-        ></span>
+        <div class="div1">
+          <div class="child1">
+            <label for="brt"> Birthday</label>
+            <input
+              type="text"
+              name=""
+              id="brt"
+              class="text"
+              placeholder="day-month-year"
+            />
+            <p class="error" id="Birthday"></p>
+          </div>
+          <div class="child1 button">
+            Gender
+            <div>
+              <input
+                class="btn"
+                type="radio"
+                name="gender"
+                value="male"
+                id="male"
+                checked
+              /><label for="male">Male</label>
+              <input
+                class="btn"
+                type="radio"
+                name="gender"
+                value="female"
+                id="female"
+              /><label for="female">Female</label>
+            </div>
+          </div>
+        </div>
+        <div class="div1">
+          <div class="child1">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name=""
+              id="email"
+              class="text"
+              placeholder="Email"
+            />
+            <p class="error" id="E-mail"></p>
+          </div>
+          <div class="child1">
+            <label for="phoneno">Phone No</label>
+            <input
+              type="text"
+              name=""
+              id="phoneno"
+              class="text"
+              placeholder="Enter your Phone No"
+            />
+            <p class="error" id="phone"></p>
+          </div>
+        </div>
+        <div class="child1">
+          <!-- <label for="subject">Subject</label>
+          <input
+            type="text"
+            name=""
+            id="subject"
+            class="text"
+            placeholder="Chose subject"
+          /> -->
 
-        <p class="p">Create video for laptop</p>
-        <p class="p">Create a new protofilio</p> -->
-        <p class="clear">
-          You have 4 pending tasks
-          <button id="clear-all" onclick="clearAll()">Clear All</button>
-        </p>
+          <div class="slect">
+            <label for="subject">Chose Subject</label>
+            <div>
+              <select name="" id="subject" class="text">
+                <option value="" disabled selected>Subject</option>
+                <option value="math">Math</option>
+                <option value="urdu">Urdu</option>
+                <option value="computer">Computer</option>
+                <option value="science">Science</option>
+                <option value="english">English</option>
+              </select>
+              <p class="error" id="chose"></p>
+            </div>
+          </div>
+          <div>
+            <button class="btn1" id="btn" onclick="subment()">Subment</button>
+          </div>
+        </div>
       </div>
     </div>
-  </body>
 
-  <script src="script.js"></script>
+    <div class="tablediv">
+      <div class="tbl" id="table">
+        <!-- <tr class="table">
+          <td>First Name</td>
+          <td class="cell">Last Name</td>
+          <td class="cell">Birthday</td>
+          <td class="cell">Gender</td>
+          <td class="cell">E-mail</td>
+          <td class="cell">Phone No</td>
+          <td class="cell">Subject</td>
+        </tr> -->
+        <div class="tablee">
+          <div class="cell">Fisrt Name</div>
+          <div class="cell">Last Name</div>
+          <div class="cell">Birthdsy</div>
+          <div class="cell">Gender</div>
+          <div class="cell">Email</div>
+          <div class="cell">Phone No</div>
+          <div class="cell">Subject</div>
+        </div>
+
+        <!-- <tr class="column" id="cell">
+          <td class="cell"></td>
+          <td class="cell"></td>
+          <td class="cell"></td>
+          <td class="cell"></td>
+          <td class="cell"></td>
+          <td class="cell"></td>
+          <td class="cell"></td>
+        </tr> -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

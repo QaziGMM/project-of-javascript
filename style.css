@@ -6,102 +6,167 @@
 html {
   font-family: "Poppins", sans-serif;
 }
+
 body {
-  background-color: rgb(0, 128, 255);
+  background-image: linear-gradient(to right, red, yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-li {
-  list-style-type: none;
-}
-ul {
-  max-height: 200px;
-  overflow-y: auto;
-}
-.container {
-  display: grid;
-  justify-self: center;
-  place-items: center;
-  margin-top: 100px;
+h2 {
+  font-weight: 400;
 }
 
-.card {
-  background-color: aliceblue;
+.container {
+  background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 30%;
-  padding: 20px;
-  align-items: center;
+  width: 100%;
+  max-width: 768px;
+  padding: 50px;
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  align-items: center;
+  margin-top: 100px;
 }
-.icon {
+.maincontaner {
+  padding: 0px 7px;
+}
+.div1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.child1 {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  & slect {
+    margin: 36px;
+  }
+}
+
+.text {
+  font-size: 12px;
+  background-color: rgb(241, 243, 244);
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  box-shadow: inset -12px -8px 40px rgba(70, 70, 70, 0.12);
+  width: 100%;
+}
+
+.btn {
+  font-size: 20px;
+  margin: 6px;
+}
+.btn1 {
+  background-color: rgb(81, 81, 241);
+
+  padding: 12px 30px;
+  border-radius: 10px;
+  color: white;
+  margin-left: 10px;
+  margin-top: 20px;
+  border: none;
   cursor: pointer;
 }
 
-.todo-header {
-  display: flex;
-  justify-content: space-between;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.input {
-  width: 100%;
-  border: none;
-  outline: none;
-}
-
-.list-item {
-  display: flex;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.19);
-  padding: 10px 20px;
-  border-radius: 5px;
-  justify-content: space-between;
-}
-#todos {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 10px;
-}
-#add-todo {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  padding: 20px;
-  background-color: white;
-}
-.pre {
-  padding-right: 60px;
-}
-.input {
-  padding: 10px;
-  font-size: 20px;
-}
-
-.clear {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-top: 20px;
-}
-#clear-all {
-  background-color: purple;
-  padding: 12px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  color: white;
-}
-
 @media (width <= 768px) {
-  .card {
+  .div1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .child1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .button {
+    align-items: start;
+  }
+  .container {
+    margin: 12px 7px;
+  }
+  .tablediv {
+    overflow-x: hidden;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+.tbl {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 10px;
+  border-radius: 6px;
+  width: auto;
+}
+
+.table {
+  padding: 12px;
+  border: 3px solid green;
+}
+
+.cell {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.column {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  width: 100%;
+  margin-left: 5px;
+}
+
+.tablee {
+  display: flex;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: white;
+  margin: 20px 0px;
+}
+
+.maintable {
+  display: flex;
+  padding: 18px;
+  border-radius: 6px;
+  background-color: white;
+  width: fit-content;
+}
+
+@media (width <= 931px) {
+  .tablee {
+    flex-direction: column;
+    max-width: fit-content;
+    margin: 0px;
+  }
+  .maintable {
+    flex-direction: column;
+    max-width: fit-content;
+  }
+  .cell {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    max-width: fit-content;
+  }
+  .column {
+    background-color: antiquewhite;
+    border-radius: 10px;
     width: fit-content;
-    margin-left: 12px;
-    margin-right: 12px;
+    margin-top: 5px;
+  }
+  .tbl {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .container {
   }
 }
